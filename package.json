@@ -8,5 +8,38 @@
   "private": true,
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "scripty": {
+    "path": "./scripts/workspace"
+  },
+  "scripts": {
+    "build": "scripty",
+    "lint": "scripty",
+    "clean": "scripty",
+    "test": "scripty",
+    "installHusky": "scripty"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@commitlint/config-lerna-scopes": "^13.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/parser": "^4.28.5",
+    "commitlint": "^13.1.0",
+    "eslint": "^7.32.0",
+    "husky": "^7.0.1",
+    "lerna": "^4.0.0",
+    "lerna-changelog": "^1.0.1",
+    "rimraf": "^3.0.2",
+    "scripty": "^2.0.0"
+  },
+  "volta": {
+    "node": "14.17.4",
+    "yarn": "1.22.11"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint"
+    }
+  }
 }
